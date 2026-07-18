@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>강동광역 차량 신청</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <!-- 아래 src의 YOUR_SCRIPT_URL_HERE 부분을 실제 배포 URL(.../exec)로 바꿔주세요 -->
+  <iframe id="appFrame" src="YOUR_SCRIPT_URL_HERE"></iframe>
+
+  <script>
+    // 이 페이지 주소에 붙은 쿼리스트링(예: ?view=status)을 그대로 iframe 안쪽에도 전달
+    var params = window.location.search;
+    if (params) {
+      var frame = document.getElementById('appFrame');
+      frame.src = frame.src + (frame.src.indexOf('?') === -1 ? params : '&' + params.slice(1));
+    }
+  </script>
+</body>
+</html>
