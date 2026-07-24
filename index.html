@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>강남동부 봉고신청</title>
+<title>강동광역 차량 신청</title>
 <style>
   html, body {
     margin: 0;
@@ -21,7 +21,8 @@
 </head>
 <body>
   <!-- 아래 src의 YOUR_SCRIPT_URL_HERE 부분을 실제 배포 URL(.../exec)로 바꿔주세요 -->
-  <iframe id="appFrame" src="https://script.google.com/macros/s/AKfycbwLYMM9HXkjQV_uzSynPBN9ia3ZoQutJ3lXEY5R80Karoz788-uIumli4WuTR18s_TG/exec"></iframe>
+  <!-- allow="clipboard-write"를 넣어야 iframe 안에서 "복사하기" 기능이 정상 작동함(안 넣으면 크롬이 복사를 막아서 "복사에 실패했습니다"가 뜸) -->
+  <iframe id="appFrame" src="YOUR_SCRIPT_URL_HERE" allow="clipboard-write"></iframe>
 
   <script>
     // 이 페이지 주소에 붙은 쿼리스트링(예: ?view=status)을 그대로 iframe 안쪽에도 전달
